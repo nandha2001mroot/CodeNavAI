@@ -1,204 +1,252 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+<p align="center">
+  <img src="/mnt/data/Gemini_Generated_Image_mnxuvgmnxuvgmnxu.png" width="80%" alt="CodeNavAI Logo"/>
+</p>
 
-🚀 AI Codebase Navigator
+<h1 align="center">⚡ CodeNavAI</h1>
+<h3 align="center">AI Codebase Navigator — Understand Any Codebase Instantly</h3>
 
-Intelligent code understanding powered by Gemini 3 Pro
+<p align="center">
+  <img src="https://img.shields.io/badge/AI-Gemini%203%20Pro-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Framework-FastAPI-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Frontend-React-lightblue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/RAG-Enabled-purple?style=for-the-badge"/>
+</p>
 
-AI Codebase Navigator is a developer tool that allows users to upload an entire repository and explore it through natural-language queries. Using Gemini 3 Pro’s advanced reasoning and multimodal embeddings, the system provides accurate code explanations, bug analysis, architecture insights, and file-level citations without hallucinations.
+---
 
-⭐ Features
-🔍 Deep Code Understanding
+## 🎥 Demo (GIF)
+<p align="center">
+  <!-- Replace this with your GIF once uploaded -->
+  <img src="YOUR_GIF_HERE.gif" width="80%" alt="CodeNavAI Demo GIF"/>
+</p>
 
-Ask natural-language questions and get answers grounded in real files.
+---
 
-🧠 Advanced Reasoning (Gemini 3 Pro)
+## 📌 Overview
 
-Traces dependencies, explains architecture, finds issues, and summarizes logic.
+**CodeNavAI** is an intelligent, developer-focused platform that allows users to upload an entire codebase and query it using natural language.  
+Powered by **Gemini 3 Pro**, the system delivers highly accurate:
 
-📁 Project Explorer
+- Code explanations  
+- Bug diagnosis  
+- Architecture summaries  
+- Security insights  
+- Dependency tracing  
+- Refactoring suggestions  
 
-Upload a repo, browse the folder tree, and inspect files with syntax highlighting.
+All responses are grounded with **file-level citations**, ensuring **zero hallucinations** using a robust **RAG pipeline**.
 
-🐞 Debugging Assistance
+---
 
-Identify root causes of bugs with supporting file citations.
+## ✨ Features
 
-🔐 Security Insights
+### 🔍 Deep Code Understanding  
+Ask natural language questions and get grounded answers with file citations.
 
-Detect common insecure patterns and suggest safe alternatives.
+### 🧠 Gemini 3 Pro Reasoning  
+Advanced multi-file reasoning to explain architecture, flows, and issues.
 
-🧹 Refactoring Suggestions
+### 📁 File Explorer  
+Upload a project and browse all folders/files with syntax highlighting.
 
-Improve clarity, reduce duplication, and modernize code style.
+### 🐞 Debug & Diagnose  
+Find root causes of errors with referenced code snippets.
 
-🧠 No Hallucinations
+### 🔐 Security Insights  
+Detect insecure code patterns and suggest safe alternatives.
 
-Uses a RAG pipeline + file/line citations to guarantee grounded responses.
+### 🧹 Refactoring Suggestions  
+Improve code clarity, reduce duplication, and modernize structure.
 
-🧩 Architecture Overview
+### 🚫 Hallucination Prevention  
+RAG pipeline + file/line-level citations ensures trustworthiness.
+
+---
+
+## 📸 Screenshots
+
+### 🔹 Code Navigation + AI Reasoning
+<p align="center">
+  <img src="/mnt/data/one.png" width="90%" />
+</p>
+
+---
+
+### 🔹 Project Navigator — Upload & Explore Codebases
+<p align="center">
+  <img src="/mnt/data/two.png" width="90%" />
+</p>
+
+---
+
+## 🧩 Architecture Overview
+
 User → React UI → FastAPI Backend → Chroma Vector DB → Gemini 3 Pro
 
-Process Flow
+markdown
+Copy code
 
-File Upload – User uploads a repository ZIP
+### 🔧 Process Flow
 
-Parsing & Chunking – Backend parses files and splits code into structured chunks
+1. **Upload ZIP Folder**  
+2. **Repository Parse & Chunking**  
+3. **Gemini Embeddings Generated**  
+4. **Vector Search via ChromaDB**  
+5. **Prompt Builder Constructs Context**  
+6. **Gemini 3 Pro Reasoning**  
+7. **Streaming UI Response + Citations**
 
-Embeddings – Gemini embeddings generated for each code chunk
+---
 
-Vector Search – ChromaDB retrieves most relevant code snippets
+## 🛠 Tech Stack
 
-Prompt Building – Repository summary + code context combined
+### 🌐 Frontend
+- React + Vite  
+- Tailwind CSS  
+- CodeMirror  
+- WebSocket Streaming  
 
-Gemini Reasoning – Model answers using multi-file reasoning and citations
+### ⚙️ Backend
+- FastAPI  
+- Python 3.11  
+- ChromaDB  
+- Gemini 3 Pro API  
+- Custom RAG pipeline  
+- Secure repo parser  
 
-UI Display – Answer is streamed to the chat view with referenced files
+### 🧠 AI & Processing
+- Gemini 3 Pro (reasoning)
+- Gemini Embeddings  
+- Prompt Builder  
+- Multi-file Analysis Engine  
 
-🛠 Tech Stack
-AI & Processing
+### 🐳 DevOps
+- Docker & Docker Compose  
+- Deployable on Google Cloud Run  
 
-Gemini 3 Pro
+---
 
-Gemini Embeddings
+## 📦 Project Structure
 
-Custom prompt builder
-
-RAG pipeline (retrieval-augmented generation)
-
-Backend
-
-FastAPI (Python 3.11)
-
-ChromaDB vector search
-
-Pydantic models
-
-Secure file-handling and repository parser
-
-Frontend
-
-React + Vite
-
-Tailwind CSS
-
-CodeMirror for syntax highlighting
-
-WebSocket streaming for AI responses
-
-DevOps
-
-Docker & Docker Compose
-
-Optional deployment: Google Cloud Run / GCP
-
-📦 Project Structure
 ai-codebase-navigator/
 │── backend/
-│   ├── main.py
-│   ├── prompt_builder.py
-│   ├── repo_parser.py
-│   ├── embeddings.py
-│   ├── rag_engine.py
-│   ├── routes/
-│   ├── models/
-│   ├── utils/
-│   └── Dockerfile
+│ ├── main.py
+│ ├── prompt_builder.py
+│ ├── repo_parser.py
+│ ├── embeddings.py
+│ ├── rag_engine.py
+│ ├── routes/
+│ ├── models/
+│ ├── utils/
+│ └── Dockerfile
 │
 │── frontend/
-│   ├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── Dockerfile
+│ ├── src/
+│ ├── components/
+│ ├── pages/
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── Dockerfile
 │
 │── docker-compose.yml
 │── README.md
 │── sample_data/
 
-⚙️ Setup Instructions
-1️⃣ Clone the repository
+yaml
+Copy code
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repo
+
+```bash
 git clone https://github.com/your-repo/ai-codebase-navigator
 cd ai-codebase-navigator
-
-2️⃣ Set environment variables
-
-Create .env in /backend:
-
-GEMINI_API_KEY=your_key_here
-
-3️⃣ Start backend
+2️⃣ Backend Setup
+bash
+Copy code
 cd backend
 pip install -r requirements.txt
-uvicorn main:app --reload
+Create .env:
 
-4️⃣ Start frontend
+ini
+Copy code
+GEMINI_API_KEY=your_api_key
+Start backend:
+
+bash
+Copy code
+uvicorn main:app --reload
+3️⃣ Frontend Setup
+bash
+Copy code
 cd frontend
 npm install
 npm run dev
-
-🧠 How to Use
-
+🧠 How to Use CodeNavAI
 Open the web UI
 
-Upload your codebase ZIP
+Upload your project folder or ZIP
 
-Explore the folder tree
+Let CodeNavAI index & analyze your code
 
-Ask questions like:
+Ask questions such as:
 
 “Where is authentication implemented?”
 
-“Why does the login function fail?”
+“Why is this endpoint failing?”
 
-“Explain the architecture.”
+“Summarize the architecture.”
 
-“Find possible security vulnerabilities.”
+“Find potential security vulnerabilities.”
 
-See code citations and explanations instantly
+“Explain how state is managed in this React app.”
 
-🧪 Example Questions
+View AI-generated answers with file-level citations.
 
-“Explain what this function does and which files call it.”
+🧪 Example Queries
+“Explain what this function does and who calls it.”
 
-“Find all APIs that touch the database.”
+“Find all database queries across the project.”
 
-“Why does this endpoint throw an error?”
+“Which files contribute to the login flow?”
 
-“Summarize the entire repository architecture.”
+“Why does the server crash when sending POST requests?”
 
+“Summarize the repository architecture.”
 
-💡 Future Improvements
+“Suggest improvements for code readability.”
 
-Multi-language code support (Java, Go, C++)
+🚀 Future Improvements
+Multi-language support (Java, Go, C++, PHP, Rust)
 
 VS Code extension
 
-Real-time GitHub repo integration
+GitHub repo ingestion
 
-Automatic documentation generation
+Auto-documentation generator
 
-CI-powered continuous analysis
+AI-powered code search
 
-🙌 Acknowledgements
+Real-time continuous analysis (CI plugin)
 
-Built using Gemini 3 Pro, Google AI Studio, and modern open-source tooling.
+❤️ Acknowledgements
+Built using:
 
-# Run and deploy your AI Studio app
+Gemini 3 Pro
 
-This contains everything you need to run your app locally.
+Google AI Studio
 
-View your app in AI Studio: https://ai.studio/apps/drive/1QiSjg9ph3m3A4BVKNPib4QfpRDrw_kkN
+FastAPI, React, ChromaDB
 
-## Run Locally
+Open-source developer tools
 
-**Prerequisites:**  Node.js
+📄 License
+MIT License — Free for personal & commercial use.
+
+⭐ Support the Project
+If you like this project, give it a ⭐ on GitHub!
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`

@@ -1,0 +1,5 @@
+{
+  "name": "AI Codebase Navigator",
+  "description": "A serverless, client-side RAG application that allows developers to upload local repositories, index code using Gemini Embeddings, and perform deep reasoning tasks using Gemini 3 Pro.",
+  "requestFramePermissions": []
+}

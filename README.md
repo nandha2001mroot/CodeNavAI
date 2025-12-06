@@ -249,5 +249,3 @@ MIT License — Free for personal & commercial use.
 ⭐ Support the Project
 If you like this project, give it a ⭐ on GitHub!
 
-markdown
-Copy code
